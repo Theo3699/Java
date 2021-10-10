@@ -8,15 +8,15 @@
 <fmt:setBundle basename="com.javatpoint.Message" var="lang"/>
 <br/>
 <form method="POST" action="store" autocomplete="off">
-    <jsp:useBean id="categories" scope="request" class="com.theo.lab2.DTO.Category"/>
-        <fmt:message key="category" bundle="${msg}"/>:
-        <select name="categorySelect" id="categorySelect">
-            <%
-                for (String category : categories.getCategories()) {
-                    out.println(String.format("<option value=\"%s\" >%s</option>", category, category));
-                }
-            %>
-        </select>
+    <jsp:useBean id="categories" scope="request" class="com.theo.lab2corect.DTO.Category"/>
+    <fmt:message key="category" bundle="${msg}"/>:
+    <select name="categorySelect" id="categorySelect">
+        <%
+            for (String category : categories.getCategories()) {
+                out.println(String.format("<option value=\"%s\" >%s</option>", category, category));
+            }
+        %>
+    </select>
     <br>
     <fmt:message key="key" bundle="${msg}"/>:
     <input type="text" name="key" size="20" value=""/> <br/>
