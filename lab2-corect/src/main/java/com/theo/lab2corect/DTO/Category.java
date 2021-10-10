@@ -1,7 +1,7 @@
 package com.theo.lab2corect.DTO;
 
 public class Category {
-    String[] categories=new String[]{"English", "Romanian", "German", "French"};
+    String[] categories=new String[]{"Gaming", "Mechanics", "Cooking", "Sports"};
 
     public Category() {
 

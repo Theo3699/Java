@@ -5,11 +5,11 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<fmt:setBundle basename="com.javatpoint.Message" var="lang"/>
+<fmt:setBundle basename="com.theo.lab2corect.DTO.Message" var="lang"/>
 <br/>
 <form method="POST" action="store" autocomplete="off">
     <jsp:useBean id="categories" scope="request" class="com.theo.lab2corect.DTO.Category"/>
-    <fmt:message key="category" bundle="${msg}"/>:
+    <fmt:message key="Category" bundle="${lang}"/>Category:
     <select name="categorySelect" id="categorySelect">
         <%
             for (String category : categories.getCategories()) {
@@ -18,9 +18,10 @@
         %>
     </select>
     <br>
-    <fmt:message key="key" bundle="${msg}"/>:
+    <fmt:message key="Key" bundle="${lang}"/>Key:
     <input type="text" name="key" size="20" value=""/> <br/>
-    <fmt:message key="name" bundle="${msg}"/>:
+    <fmt:message key="Value" bundle="${lang}"/>Value:
     <input type="text" name="name" size="20" value=""/> <br/>
+    <input type="submit" name="submit" >
 </body>
 </html>
