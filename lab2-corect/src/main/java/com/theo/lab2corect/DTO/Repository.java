@@ -20,4 +20,16 @@ public class Repository {
     public void addRecord(Record record){
         this.records.add(record);
     }
+
+    @Override
+    public String toString() {
+        return "<table style=width:100%>" +
+                "  <tr>" +
+                "    <th>Category</th>" +
+                "    <th>Key</th>" +
+                "    <th>Value</th>" +
+                "  </tr>" +
+               records +
+                "</table>";
+    }
 }

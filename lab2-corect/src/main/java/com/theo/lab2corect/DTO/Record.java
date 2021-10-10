@@ -37,10 +37,10 @@ public class Record {
 
     @Override
     public String toString() {
-        return "Record{" +
-                "category='" + category + '\'' +
-                ", key='" + key + '\'' +
-                ", value='" + value + '\'' +
-                '}';
+        return "<tr>" +
+                "    <td><center>" + getCategory() + "</center></td>" +
+                "    <td><center>" + getKey() + "</center></td>" +
+                "    <td><center>" + getValue() + "</center></td>" +
+                "  </tr>";
     }
 }
