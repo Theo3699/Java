@@ -11,8 +11,23 @@
     <label for="categorySelect">Category:</label>
     <select name="categorySelect" id="categorySelect">
         <%
+            String lastCategorySelected=null;
+            Cookie cookies[] = request.getCookies();
+            if (cookies!=null){
+                for (Cookie cookie: cookies){
+                    if (cookie.getName().equals("CategorySelection")){
+                        lastCategorySelected = cookie.getValue();
+                    }
+                }
+            }
             for (String category : categories.getCategories()) {
-                out.println(String.format("<option value=\"%s\" >%s</option>", category, category));
+                if (category.equals(lastCategorySelected)) {
+                    out.println("<option value=" + category + " selected>" + category + "</option>");
+                }
+                else{
+                    out.println("<option value=" + category + ">" + category + "</option>");
+                }
+                //out.println(String.format("<option value=\"%s\" %s>%s</option>", category, category.equals(lastCategorySelected) ? "selected" : "", category));
             }
         %>
     </select>

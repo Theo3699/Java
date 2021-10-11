@@ -5,6 +5,7 @@ import com.theo.lab2corect.DTOs.Repository;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,6 +28,10 @@ public class RepoServlet extends HttpServlet {
         String value = request.getParameter("value");
         Record record = new Record(category, key, value);
         repository.addRecord(record);
+
+        Cookie cookie = new Cookie("CategorySelection", category);
+        cookie.setMaxAge(120);
+        response.addCookie(cookie);
 
         request.setAttribute("repository", repository);
         getServletContext().getRequestDispatcher("/WEB-INF/pages/result.jsp").forward(request, response);

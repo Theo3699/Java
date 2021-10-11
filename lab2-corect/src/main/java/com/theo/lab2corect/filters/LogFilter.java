@@ -4,6 +4,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.Enumeration;
 
 @WebFilter(
         urlPatterns = {"/repository", "/"})
@@ -22,6 +23,8 @@ public class LogFilter implements Filter {
                 request.getMethod(),
                 request.getRemoteAddr(),
                 request.getHeader("User-Agent")));
+
+        System.out.println(request.getParameter("categorySelect"));
 
         chain.doFilter(req, res);
     }
