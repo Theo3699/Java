@@ -27,7 +27,6 @@
                 else{
                     out.println("<option value=" + category + ">" + category + "</option>");
                 }
-                //out.println(String.format("<option value=\"%s\" %s>%s</option>", category, category.equals(lastCategorySelected) ? "selected" : "", category));
             }
         %>
     </select>
