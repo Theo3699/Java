@@ -23,7 +23,7 @@ public class Repository {
 
     @Override
     public String toString() {
-        return "<table style=width:100%>" +
+        return "<table style=width:100% border=1px solid black>" +
                 "  <tr>" +
                 "    <th>Category</th>" +
                 "    <th>Key</th>" +

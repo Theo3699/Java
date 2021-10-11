@@ -21,7 +21,6 @@ public class RepoServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
 
         String category = request.getParameter("categorySelect");
         String key = request.getParameter("key");
@@ -29,9 +28,6 @@ public class RepoServlet extends HttpServlet {
         Record record = new Record(category, key, value);
         repository.addRecord(record);
 
-
-        out.println("<h1> Am ajuns in store Servlet </h1>");
-        out.println(repository.getRecords());
         request.setAttribute("repository", repository);
         getServletContext().getRequestDispatcher("/WEB-INF/pages/result.jsp").forward(request, response);
     }
