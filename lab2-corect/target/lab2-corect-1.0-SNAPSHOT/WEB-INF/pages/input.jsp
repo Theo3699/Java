@@ -27,7 +27,6 @@
                 else{
                     out.println("<option value=" + category + ">" + category + "</option>");
                 }
-                //out.println(String.format("<option value=\"%s\" %s>%s</option>", category, category.equals(lastCategorySelected) ? "selected" : "", category));
             }
         %>
     </select>
@@ -36,6 +35,8 @@
         <input type="text" id="key" name="key"><br>
         <label for="value">Value</label><br>
         <input type="text" id="value" name="value">
+        <img src="captcha.png"> <br>
+        <input type="text" name="captchaText" size="20"> <br>
     <input type="submit" name="submit" >
 </body>
 </html>
