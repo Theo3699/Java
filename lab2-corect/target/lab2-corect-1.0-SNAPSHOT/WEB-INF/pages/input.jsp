@@ -35,8 +35,6 @@
         <input type="text" id="key" name="key"><br>
         <label for="value">Value</label><br>
         <input type="text" id="value" name="value">
-        <img src="captcha.png"> <br>
-        <input type="text" name="captchaText" size="20"> <br>
     <input type="submit" name="submit" >
 </body>
 </html>
