@@ -19,7 +19,7 @@ public class CaptchaServlet extends HttpServlet {
         String captchaString = generateCaptchaString();
         System.out.println(captchaString);
 
-        request.setAttribute("captchaString", captchaString);
+        request.getSession().setAttribute("captchaString", captchaString);
 
         BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2d = img.createGraphics();

@@ -15,5 +15,9 @@ public class FirstStepServlet extends HttpServlet {
         getServletContext().getRequestDispatcher("/WEB-INF/pages/input.jsp").forward(request, response);
     }
 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        getServletContext().getRequestDispatcher("/WEB-INF/pages/input.jsp").forward(request, response);
+    }
+
 }
 

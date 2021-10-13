@@ -24,8 +24,6 @@ public class LogFilter implements Filter {
                 request.getRemoteAddr(),
                 request.getHeader("User-Agent")));
 
-        System.out.println(request.getParameter("categorySelect"));
-
         chain.doFilter(req, res);
     }
 

@@ -23,14 +23,6 @@ public class RepoServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
 
-        String captchaString = request.getParameter("captchaString");
-        if (!captchaString.equals("ceva")){
-            System.out.println("greseala vere" + captchaString);
-        }
-        else{
-            System.out.println("e bine!" + captchaString);
-        }
-
         String category = request.getParameter("categorySelect");
         String key = request.getParameter("key");
         String value = request.getParameter("value");

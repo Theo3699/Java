@@ -6,7 +6,7 @@
 </head>
 <body>
 <br/>
-<form method="POST" action="repository" autocomplete="off">
+<form method="POST" action="validator">
     <jsp:useBean id="categories" scope="request" class="com.theo.lab2corect.DTOs.Category"/>
     <label for="categorySelect">Category:</label>
     <select name="categorySelect" id="categorySelect">
