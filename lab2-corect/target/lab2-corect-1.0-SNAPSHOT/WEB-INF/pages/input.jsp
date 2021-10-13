@@ -34,7 +34,8 @@
         <label for="key">Key:</label><br>
         <input type="text" id="key" name="key"><br>
         <label for="value">Value</label><br>
-        <input type="text" id="value" name="value">
-    <input type="submit" name="submit" >
+        <input type="text" id="value" name="value"><br>
+        <img src="image.png"> <br>
+        <input type="submit" name="submit" >
 </body>
 </html>

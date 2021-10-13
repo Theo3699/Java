@@ -1,29 +1,19 @@
 package com.theo.lab2corect.controllers;
 
 import javax.imageio.ImageIO;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.awt.*;
-import java.awt.geom.QuadCurve2D;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintWriter;
-import java.util.Hashtable;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
-import static java.awt.image.BufferedImage.TYPE_INT_RGB;
-
-@WebServlet(name = "CaptchaServlet", urlPatterns = "/captcha")
-public class CaptchaServlet extends HttpServlet {
+@WebServlet(name = "GenerateImageServlet", urlPatterns = "/image.png")
+public class GenerateImage extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String captchaString = generateCaptchaString();
@@ -61,18 +51,11 @@ public class CaptchaServlet extends HttpServlet {
         g2d.setStroke(stroke);
         g2d.drawLine(0, 25, 360, 50);
         g2d.dispose();
-        try {
-            ImageIO.write(img, "png", new File("C:\\Facultate\\Java\\Java\\lab2-corect\\src\\main\\webapp\\WEB-INF\\pages\\image.png"));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
 
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        getServletContext().getRequestDispatcher("/WEB-INF/pages/input.jsp").forward(request, response);
+        response.setContentType("image/jpg");
+        ServletOutputStream responseOutputStream = response.getOutputStream();
+        ImageIO.write(img, "jpg", responseOutputStream);
+        responseOutputStream.close();
     }
 
     /**
@@ -100,6 +83,4 @@ public class CaptchaServlet extends HttpServlet {
 
         return captchaStringBuffer.toString();
     }
-
 }
-
