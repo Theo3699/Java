@@ -35,7 +35,10 @@
         <input type="text" id="key" name="key"><br>
         <label for="value">Value</label><br>
         <input type="text" id="value" name="value"><br>
-        <img src="image.png"> <br>
-        <input type="submit" name="submit" >
+        To continue, type the characters you see in the picture:<br>
+        <img src="captcha"> <br>
+        <label for="captchaString">Characters:</label>
+        <input type="text" id="captchaString" name="captchaString"><br>
+        <input type="submit" name="submit">
 </body>
 </html>

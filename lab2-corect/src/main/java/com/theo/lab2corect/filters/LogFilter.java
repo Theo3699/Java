@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Enumeration;
 
 @WebFilter(
-        urlPatterns = {"/repository", "/"})
+        urlPatterns = {"/repository", "/captcha", "/"})
 public class LogFilter implements Filter {
 
     @Override
