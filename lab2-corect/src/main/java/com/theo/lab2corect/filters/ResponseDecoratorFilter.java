@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebFilter(urlPatterns = {"/repository", "/"})
+@WebFilter(urlPatterns = {"/", "/repository"})
 public class ResponseDecoratorFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
