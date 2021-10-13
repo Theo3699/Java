@@ -23,17 +23,24 @@ public class RepoServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
 
-        String category = request.getParameter("categorySelect");
-        String key = request.getParameter("key");
-        String value = request.getParameter("value");
-        Record record = new Record(category, key, value);
-        repository.addRecord(record);
+        String inputCaptchaString = request.getParameter("captchaString");
+        String generatedCaptchaString = (String) request.getSession().getAttribute("captchaString");
+        if (inputCaptchaString.equals(generatedCaptchaString)) {
+            String category = request.getParameter("categorySelect");
+            String key = request.getParameter("key");
+            String value = request.getParameter("value");
+            Record record = new Record(category, key, value);
+            repository.addRecord(record);
 
-        Cookie cookie = new Cookie("CategorySelection", category);
-        cookie.setMaxAge(120);
-        response.addCookie(cookie);
+            Cookie cookie = new Cookie("CategorySelection", category);
+            cookie.setMaxAge(120);
+            response.addCookie(cookie);
+            request.setAttribute("repository", repository);
+            getServletContext().getRequestDispatcher("/WEB-INF/pages/result.jsp").forward(request, response);
+        }
+        else{
+            getServletContext().getRequestDispatcher("/WEB-INF/pages/wrongCaptcha.jsp").forward(request, response);
+        }
 
-        request.setAttribute("repository", repository);
-        getServletContext().getRequestDispatcher("/WEB-INF/pages/result.jsp").forward(request, response);
     }
 }
