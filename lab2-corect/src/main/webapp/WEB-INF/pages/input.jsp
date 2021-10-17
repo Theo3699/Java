@@ -20,6 +20,7 @@
                     }
                 }
             }
+            //prints the categories
             for (String category : categories.getCategories()) {
                 if (category.equals(lastCategorySelected)) {
                     out.println("<option value=" + category + " selected>" + category + "</option>");
