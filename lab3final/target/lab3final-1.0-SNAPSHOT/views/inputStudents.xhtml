@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<f:loadBundle basename="Message" var="message"/>
+<h:head>
+    <title>#{message.title}</title>
+</h:head>
+<h:body>
+    <div class="card">
+        <div class="p-col-12 p-md-4">
+            <p:staticMessage severity="error" summary="ERROR" detail="#{exam.minutes}" style="width: 100%"/>
+        </div>
+    </div>
+</h:body>
+</html>
