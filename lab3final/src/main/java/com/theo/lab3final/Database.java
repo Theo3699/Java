@@ -1,13 +1,15 @@
 package com.theo.lab3final;
 
-
+import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import java.io.Serializable;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @ManagedBean
-@RequestScoped
-public class Database {
+@SessionScoped
+public class Database implements Serializable {
     Connection connection;
     private String url = "jdbc:postgresql://localhost:5432/postgres";
     private String username = "postgres";
@@ -33,7 +35,7 @@ public class Database {
             pstmt.setString(2, exam.getStartingTime());
             pstmt.setString(3, exam.getMinutes());
             pstmt.executeUpdate();
-            System.out.println(pstmt + "\nSuccess!");
+            System.out.println("Added exam");
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
@@ -41,5 +43,57 @@ public class Database {
         return true;
     }
 
+    public boolean addStudent(Student student){
+        String sql = "INSERT INTO students (name, examname) VALUES(?, ?)";
+        try {
+            connection = DriverManager.getConnection(url, username, password);
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            pstmt.setString(1, student.getName());
+            pstmt.setString(2, student.getExam());
+            pstmt.executeUpdate();
+            System.out.println("Student added");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public List<Exam> getExams(){
+        String sql = "SELECT * FROM exams";
+        List<Exam> queriedExams = new ArrayList<>();
+        try{
+            connection = DriverManager.getConnection(url, username, password);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()){
+                String examName = resultSet.getString("name");
+                String examStartingTime = resultSet.getString("startingtime");
+                String examDuration = resultSet.getString("duration");
+                queriedExams.add(new Exam(examName, examStartingTime, examDuration));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return queriedExams;
+    }
+
+    public List<Student> getStudents(){
+        String sql = "SELECT * FROM students";
+        List<Student> queriedStudents = new ArrayList<>();
+        try{
+            connection = DriverManager.getConnection(url, username, password);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()){
+                String studentName = resultSet.getString("name");
+                String studentExamName = resultSet.getString("examname");
+                queriedStudents.add(new Student(studentName, studentExamName));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return queriedStudents;
+    }
 
 }

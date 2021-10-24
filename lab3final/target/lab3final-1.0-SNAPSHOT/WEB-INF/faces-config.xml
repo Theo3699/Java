@@ -19,9 +19,18 @@
     </application>
     <navigation-rule>
         <from-view-id>/views/inputExams.xhtml</from-view-id>
+            <navigation-case>
+                <from-outcome>inputStudents</from-outcome>
+                <to-view-id>/views/inputStudents.xhtml</to-view-id>
+                <redirect/>
+            </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/views/inputStudents.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>inputStudents</from-outcome>
-            <to-view-id>/views/inputStudents.xhtml</to-view-id>
+            <from-outcome>viewTables</from-outcome>
+            <to-view-id>/views/viewTables.xhtml</to-view-id>
+            <redirect/>
         </navigation-case>
     </navigation-rule>
 </faces-config>

@@ -9,35 +9,29 @@ import java.util.List;
 @RequestScoped
 public class Student {
     private String name;
-    private List<Exam> exams;
+    private String examName;
 
     public Student() {
-        exams = new ArrayList<>();
     }
 
-    public Student(String name, List<Exam> exams) {
+    public Student(String name, String exam) {
         this.name = name;
-        this.exams = exams;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public List<Exam> getExams() {
-        return exams;
+        this.examName = exam;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setExams(List<Exam> exams) {
-        this.exams = exams;
+    public void setExam(String exam) {
+        this.examName = exam;
     }
 
-    public void tryConnection(){
-        Database database = new Database();
-        System.out.println(database.connect());
+    public String getName() {
+        return name;
+    }
+
+    public String getExam() {
+        return examName;
     }
 }

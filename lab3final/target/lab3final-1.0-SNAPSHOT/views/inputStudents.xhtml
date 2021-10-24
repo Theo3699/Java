@@ -8,10 +8,40 @@
     <title>#{message.title}</title>
 </h:head>
 <h:body>
-    <div class="card">
-        <div class="p-col-12 p-md-4">
-            <p:staticMessage severity="error" summary="ERROR" detail="#{exam.minutes}" style="width: 100%"/>
-        </div>
-    </div>
+    <h2>
+        #{message.greeting} Theo!
+    </h2>
+    <p:panelGrid style="width: 50%;">
+        <p:row>
+            <h:form>
+                <div class="card">
+                    <div class="ui-fluid">
+                        <div class="p-field">
+                            <p:outputLabel for="studentName" value="Student name"/>
+                            <p:inputText id="studentName" value="#{student.name}" required="true" requiredMessage="Student name is required!"/>
+                        </div>
+                        <div class="p-field">
+                            <p:outputLabel for="examName" value="Exam name"/>
+                            <p:inputText id="examName" value="#{student.exam}" required="true" requiredMessage="The exam that the student must attent is required!"/>
+                        </div>
+                        <div class="ui-colorpicker_submit">
+                            <p:commandButton id="submit_student" value="Submit" action="#{database.addStudent(student)}"/>
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </p:row>
+        <p:row>
+            <h:form>
+                <div class="card">
+                    <div class="ui-fluid">
+                        <div class="ui-colorpicker_submit">
+                            <p:commandButton id="viewTables" value="Go to the tables" action="viewTables.xhtml"/>
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </p:row>
+    </p:panelGrid>
 </h:body>
 </html>
