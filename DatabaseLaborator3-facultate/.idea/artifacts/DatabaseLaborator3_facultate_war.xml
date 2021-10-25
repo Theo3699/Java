@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DatabaseLaborator3-facultate:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>DatabaseLaborator3-facultate</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="DatabaseLaborator3-facultate-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="DatabaseLaborator3-facultate:war exploded" />
+    </root>
+  </artifact>
+</component>

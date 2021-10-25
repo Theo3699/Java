@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<f:loadBundle basename="Message" var="message"/>
+<h:head>
+    <title>#{message.title}</title>
+</h:head>
+<h:body>
+    <h2>
+        #{message.greeting}
+    </h2>
+    <p:panelGrid style="width: 50%;">
+        <p:row>
+            <h:form>
+                <div class="card">
+                    <div class="ui-fluid">
+                        <div class="p-field">
+                            <p:outputLabel for="studentName" value="Student name"/>
+                            <p:inputText id="studentName" value="#{student.name}" required="true" requiredMessage="Student name is required!"/>
+                        </div>
+                        <div class="p-field">
+                            <p:outputLabel for="examName" value="Exam name"/>
+                            <p:inputText id="examName" value="#{student.exam}" required="true" requiredMessage="The exam that the student must attent is required!"/>
+                        </div>
+                        <div class="ui-colorpicker_submit">
+                            <p:commandButton id="submit_student" value="#{message.submit}" action="#{database.addStudent(student)}"/>
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </p:row>
+        <p:row>
+            <h:form>
+                <div class="card">
+                    <div class="ui-fluid">
+                        <div class="ui-colorpicker_submit">
+                            <p:commandButton id="viewTables" value="#{message.tables}" action="viewTables.xhtml" ajax="false"/>
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </p:row>
+    </p:panelGrid>
+</h:body>
+</html>
