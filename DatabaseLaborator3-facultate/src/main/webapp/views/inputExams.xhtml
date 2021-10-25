@@ -17,15 +17,15 @@
                 <div class="card">
                     <div class="ui-fluid">
                         <div class="p-field">
-                            <p:outputLabel for="examName" value="Exam name"/>
+                            <p:outputLabel for="examName" value="#{message.examname}"/>
                             <p:inputText id="examName" value="#{exam.name}" required="true" requiredMessage="Exam name is required!"/>
                         </div>
                         <div class="p-field">
-                            <p:outputLabel for="examStartingTime" value="Exam starting time"/>
+                            <p:outputLabel for="examStartingTime" value="#{message.startime}"/>
                             <p:inputText id="examStartingTime" value="#{exam.startingTime}" required="true" requiredMessage="Exam starting time is required!"/>
                         </div>
                         <div class="p-field">
-                            <p:outputLabel for="examDurationMinutes" value="Exam minutes"/>
+                            <p:outputLabel for="examDurationMinutes" value="#{message.duration}"/>
                             <p:inputText id="examDurationMinutes" value="#{exam.minutes}" required="true" requiredMessage="Exam minutes duration is required!"/>
                         </div>
                         <div class="ui-colorpicker_submit">
