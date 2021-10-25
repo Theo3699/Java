@@ -13,15 +13,15 @@
 
         <div class="card">
             <p:dataTable id="examsDT" var="exam" value="#{dtSelectionView.exams}">
-                <p:column headerText="Name">
+                <p:column headerText="#{message.examname}">
                     <h:outputText value="#{exam.name}" />
                 </p:column>
 
-                <p:column headerText="Starting Time">
+                <p:column headerText="#{message.startime}">
                     <h:outputText value="#{exam.startingTime}" />
                 </p:column>
 
-                <p:column headerText="Duration">
+                <p:column headerText="#{message.duration}">
                     <h:outputText value="#{exam.minutes}" />
                 </p:column>
             </p:dataTable>
@@ -29,11 +29,11 @@
 
         <div class="card">
             <p:dataTable id="studentsDT" var="student" value="#{dtSelectionView.students}">
-                <p:column headerText="Name">
+                <p:column headerText="#{message.studentname}">
                     <h:outputText value="#{student.name}" />
                 </p:column>
 
-                <p:column headerText="Exam name">
+                <p:column headerText="#{message.examname}">
                     <h:outputText value="#{student.exam}" />
                 </p:column>
             </p:dataTable>

@@ -17,11 +17,11 @@
                 <div class="card">
                     <div class="ui-fluid">
                         <div class="p-field">
-                            <p:outputLabel for="studentName" value="Student name"/>
+                            <p:outputLabel for="studentName" value="#{message.studentname}"/>
                             <p:inputText id="studentName" value="#{student.name}" required="true" requiredMessage="Student name is required!"/>
                         </div>
                         <div class="p-field">
-                            <p:outputLabel for="examName" value="Exam name"/>
+                            <p:outputLabel for="examName" value="#{message.examname}"/>
                             <p:inputText id="examName" value="#{student.exam}" required="true" requiredMessage="The exam that the student must attent is required!"/>
                         </div>
                         <div class="ui-colorpicker_submit">
