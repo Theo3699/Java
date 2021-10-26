@@ -5,7 +5,11 @@
         xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
         xmlns:p="http://primefaces.org/ui">
 
-<h:body>
-    <ui:include src="/views/menuBar.xhtml" />
-</h:body>
+    <f:loadBundle basename="Message" var="message"/>
+    <h:head>
+        <title>#{message.title}</title>
+    </h:head>
+    <h:body>
+        <ui:include src="/views/menuBar.xhtml" />
+    </h:body>
 </ui:composition>
