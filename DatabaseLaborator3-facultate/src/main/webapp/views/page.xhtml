@@ -4,10 +4,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 
-<h:head>
-    <title>Facelets Template</title>
-</h:head>
-
+<f:loadBundle basename="Message" var="message"/>
 <h:body>
     <div id="top" class="top">
         <ui:insert name="top">
@@ -18,7 +15,13 @@
         <ui:insert name="content"></ui:insert>
     </div>
     <div id="bottom" class="bottom">
-        <ui:insert name="bottom">salut</ui:insert>
+        <ui:insert name="bottom">
+            <div style="position:fixed; bottom:0; width:100%">
+                <p:separator/>
+                #{message.version}<br/>
+                Copyright &#169; Theodor Samson. #{message.copyright}
+            </div>
+        </ui:insert>
     </div>
 </h:body>
 </html>
