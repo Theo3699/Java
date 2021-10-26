@@ -26,4 +26,12 @@
             <redirect/>
         </navigation-case>
     </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/views/home.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>inputExams</from-outcome>
+            <to-view-id>/views/inputExams.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>

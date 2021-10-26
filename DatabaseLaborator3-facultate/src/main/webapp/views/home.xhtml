@@ -1,0 +1,33 @@
+<ui:composition template="/views/page.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+    <f:loadBundle basename="Message" var="message"/>
+    <h:head>
+        <title>#{message.title}</title>
+    </h:head>
+    <ui:define name="top">
+        <div class="card">
+            <p:tabMenu activeIndex="#{param.i}">
+                <p:menuitem value="Home" outcome="inputExams" icon="pi pi-fw pi-home">
+                    <f:param name="i" value="0"/>
+                </p:menuitem>
+                <p:menuitem value="Calendar" outcome="inputStudents" icon="pi pi-fw pi-calendar">
+                    <f:param name="i" value="1"/>
+                </p:menuitem>
+                <p:menuitem value="Edit" outcome="viewTables" icon="pi pi-fw pi-pencil">
+                    <f:param name="i" value="2"/>
+                </p:menuitem>
+                <p:menuitem value="Documentation" outcome="inputStudents" icon="pi pi-fw pi-file">
+                    <f:param name="i" value="3"/>
+                </p:menuitem>
+                <p:menuitem value="Settings" outcome="inputStudents" icon="pi pi-fw pi-cog">
+                    <f:param name="i" value="4"/>
+                </p:menuitem>
+            </p:tabMenu>
+        </div>
+    </ui:define>
+</ui:composition>
