@@ -5,6 +5,13 @@
                                   http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
     <application>
+        <message-bundle>
+            Message
+        </message-bundle>
+        <resource-bundle>
+            <base-name>Message</base-name>
+            <var>message</var>
+        </resource-bundle>
         <locale-config>
             <default-locale>en</default-locale>
             <supported-locale>ro</supported-locale>
