@@ -13,7 +13,8 @@
             </ui:insert>
             <div class="ui-fluid">
                 <div class="ui-colorpicker_submit">
-                    <p:commandButton id="submit_exam" value="#{message.submit}" action="#{dataEdit.addExam(exam)}" />
+                    <p:commandButton id="submit_exam" value="#{message.submitExam}" action="#{dataEdit.add(exam)}" />
+                    <p:commandButton id="submit_student" value="#{message.submitStudent}" action="#{dataEdit.add(student)}" />
                     <p:button id="cancel" immediate="true" value="cancel"/>
                 </div>
             </div>

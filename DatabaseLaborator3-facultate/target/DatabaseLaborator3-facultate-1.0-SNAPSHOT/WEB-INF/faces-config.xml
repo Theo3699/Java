@@ -52,5 +52,10 @@
             <from-outcome>genericDataEdit</from-outcome>
             <to-view-id>/WEB-INF/templates/genericDataEdit.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>inputExams</from-outcome>
+            <to-view-id>/views/inputStudents.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
     </navigation-rule>
 </faces-config>

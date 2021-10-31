@@ -26,7 +26,7 @@ public class Database implements Serializable {
         return connection;
     }
 
-    public boolean addExam(Exam exam){
+    public boolean add(Exam exam){
         String sql = "INSERT INTO exams (name, startingtime, duration) VALUES(?, ?, ?)";
         try {
             connection = DriverManager.getConnection(url, username, password);
@@ -43,7 +43,7 @@ public class Database implements Serializable {
         return true;
     }
 
-    public boolean addStudent(Student student){
+    public boolean add(Student student){
         String sql = "INSERT INTO students (name, examname) VALUES(?, ?)";
         try {
             connection = DriverManager.getConnection(url, username, password);
