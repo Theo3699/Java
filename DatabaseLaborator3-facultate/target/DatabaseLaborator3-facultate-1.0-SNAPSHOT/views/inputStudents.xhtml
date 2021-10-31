@@ -1,9 +1,11 @@
-<ui:composition template="../WEB-INF/templates/genericDataForm.xhtml"
+<ui:composition template="../WEB-INF/templates/genericDataEdit.xhtml"
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:ui="http://java.sun.com/jsf/facelets">
 
-    <ui:define name="formContent">
+    <ui:param name="dataEdit" value="#{database.addStudent(student)}"/>
+
+    <ui:define name="dataEditContent">
         <h:form>
             <div class="card">
                 <div class="ui-fluid">
@@ -16,10 +18,6 @@
                         <p:outputLabel for="examName" value="#{message.examname}"/>
                         <p:inputText id="examName" value="#{student.exam}" required="true"
                                      requiredMessage="The exam that the student must attent is required!"/>
-                    </div>
-                    <div class="ui-colorpicker_submit">
-                        <p:commandButton id="submit_student" value="#{message.submit}"
-                                         action="#{database.addStudent(student)}" ajax="false"/>
                     </div>
                 </div>
             </div>

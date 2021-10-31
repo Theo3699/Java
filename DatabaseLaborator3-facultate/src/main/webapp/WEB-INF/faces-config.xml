@@ -41,4 +41,16 @@
             <redirect/>
         </navigation-case>
     </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/WEB-INF/templates/genericDataEdit.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>inputStudents</from-outcome>
+            <to-view-id>/views/inputStudents.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>genericDataEdit</from-outcome>
+            <to-view-id>/WEB-INF/templates/genericDataEdit.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>
