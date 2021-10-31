@@ -16,11 +16,7 @@
     </div>
     <div id="bottom" class="bottom">
         <ui:insert name="bottom">
-            <div style="position:fixed; bottom:0; width:100%">
-                <p:separator/>
-                #{message.version}<br/>
-                Copyright &#169; Theodor Samson. #{message.copyright}
-            </div>
+            <ui:include src="/views/footer.xhtml"/>
         </ui:insert>
     </div>
 </h:body>
