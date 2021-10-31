@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="lab3final:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="25427d71-b92d-4b36-9752-b1a0708fe54c" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/DatabaseLaborator3-facultate.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/java/com/theo/databaselaborator3facultate/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/java/com/theo/databaselaborator3facultate/DtSelectionView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/java/com/theo/databaselaborator3facultate/Exam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/java/com/theo/databaselaborator3facultate/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/resources/Message_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/resources/Message_en_ro.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/webapp/WEB-INF/jboss-deployment-structure.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/webapp/views/inputExams.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/webapp/views/inputStudents.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DatabaseLaborator3-facultate/src/main/webapp/views/viewTables.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/lab3final_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/lab3final_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_javax_el_api_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_enterprise_cdi_api_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_interceptor_javax_interceptor_api_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_primefaces_10_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab3final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theo/lab3final/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theo/lab3final/DtSelectionView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theo/lab3final/Exam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theo/lab3final/Student.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1zjZLcLSNjlK5Tg7Vz2Jke5bWda" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../WildFly/wildfly-25.0.0.Final/modules/system/layers/base/org/postgresql/main/postgresql-42.2.24.jar" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.15747127" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Facultate\Java\Java\lab3final\src\main\java\com\theo\lab3final" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Facultate\Java\Java\lab3final\src\main\webapp\views" />
+      <recent name="C:\Facultate\Java\Java\lab3final\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="JBoss/WildFly 25.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 25.0.0.Final" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/lab3final-1.0-SNAPSHOT" />
+      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+      <deployment>
+        <artifact name="lab3final:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="true" />
+        <option name="SERVER_GROUP" value="main-server-group" />
+        <option name="USERNAME" value="" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54503" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="lab3final:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="JBossConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="SERVER" value="" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="" />
+        <option name="USERNAME" value="" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58411" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25427d71-b92d-4b36-9752-b1a0708fe54c" name="Changes" comment="" />
+      <created>1634663404447</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634663404447</updated>
+      <workItem from="1634663405938" duration="1278000" />
+      <workItem from="1634749888510" duration="1395000" />
+      <workItem from="1634757010062" duration="3899000" />
+      <workItem from="1634827519272" duration="7827000" />
+      <workItem from="1635101189521" duration="4804000" />
+      <workItem from="1635106104285" duration="5030000" />
+      <workItem from="1635153382232" duration="1949000" />
+      <workItem from="1635165163231" duration="120000" />
+      <workItem from="1635167535497" duration="1033000" />
+      <workItem from="1635172029975" duration="1740000" />
+      <workItem from="1635175788820" duration="2126000" />
+      <workItem from="1635178524638" duration="10000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1635101324357</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635101324357</updated>
+    </task>
+    <task id="LOCAL-00002" summary="inputExams.xhtml, inputStudents.xhtml and viewTables.xhtml working">
+      <created>1635111144972</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635111144972</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added internationalization">
+      <created>1635156077863</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1635156077863</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added internationalization">
+      <created>1635168337460</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635168337460</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added internationalization">
+      <created>1635168509979</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635168509979</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1635168526007</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1635168526007</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="inputExams.xhtml, inputStudents.xhtml and viewTables.xhtml working" />
+    <MESSAGE value="Added internationalization" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../Laborator3/src/main/java/com/theo/lab3final/Database.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../Laborator3/src/main/java/com/theo/lab3final/Database.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lab3final$JBoss_WildFly_25_0_0_Final.ic" NAME="JBoss/WildFly 25.0.0.Final Coverage Results" MODIFIED="1635105451508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
