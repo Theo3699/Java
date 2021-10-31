@@ -15,8 +15,8 @@ I created a Web application containing the following components:
 
 ## Lab3 --> DatabaseLaborator3-facultate
 Created the following components:
-A Web page for defining the exams. Each exam has a name, a starting time and a duration. --> inputExams.xhtml
-A Web page for defining the students that must attend the exams. Each student has a name and the list of exams. --> inputStudents.xhtml
-Use a relational database and JDBC in order to store and retrieve data. (PostgreSQL is recommended).
-Use at least one non trivial JSF component, for example a data table, a dialog, etc. -->viewTables.xhtml. Used a dataTable
-Internationalize the user interface and offer support for at least two locales. --> en and ro
+- A Web page for defining the exams. Each exam has a name, a starting time and a duration. --> inputExams.xhtml
+- A Web page for defining the students that must attend the exams. Each student has a name and the list of exams. --> inputStudents.xhtml
+- Use a relational database and JDBC in order to store and retrieve data. (PostgreSQL is recommended).
+- Use at least one non trivial JSF component, for example a data table, a dialog, etc. -->viewTables.xhtml. Used a dataTable
+- Internationalize the user interface and offer support for at least two locales. --> en and ro
