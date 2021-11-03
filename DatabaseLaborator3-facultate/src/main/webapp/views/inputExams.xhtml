@@ -1,33 +1,25 @@
 <ui:composition template="../WEB-INF/templates/genericDataEdit.xhtml"
-                xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:p="http://primefaces.org/ui"
-                xmlns:ui="http://java.sun.com/jsf/facelets">
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:ez="http://java.sun.com/jsf/composite/ezcomp">
 
     <ui:param name="dataEdit" value="#{database}"/>
     <ui:param name="examBoolean" value="True"/>
     <ui:param name="studentBoolean" value="False"/>
+<!--    <ui:param name="temp" value="#{message.examname}"/>-->
 
     <ui:define name="dataEditContent">
-        <h:form>
-            <div class="card">
-                <div class="ui-fluid">
-                    <div class="p-field">
-                        <p:outputLabel for="examName" value="#{message.examname}"/>
-                        <p:inputText id="examName" value="#{exam.name}" required="true"
-                                     requiredMessage="Exam name is required!"/>
-                    </div>
-                    <div class="p-field">
-                        <p:outputLabel for="examStartingTime" value="#{message.startime}"/>
-                        <p:inputText id="examStartingTime" value="#{exam.startingTime}" required="true"
-                                     requiredMessage="Exam starting time is required!"/>
-                    </div>
-                    <div class="p-field">
-                        <p:outputLabel for="examDurationMinutes" value="#{message.duration}"/>
-                        <p:inputText id="examDurationMinutes" value="#{exam.minutes}" required="true"
-                                     requiredMessage="Exam minutes duration is required!"/>
-                    </div>
-                </div>
+        <div class="card">
+            <div class="ui-fluid">
+                <ez:autoComplete
+                    examLabel="#{message.examname}"
+                    examValue="#{exam.name}"
+                    examStartingTime="#{message.startime}"
+                    examStartingTimeValue="#{exam.startingTime}"
+                    examDuration="#{message.duration}"
+                    examDurationValue="#{exam.minutes}"
+                />
             </div>
-        </h:form>
+        </div>
     </ui:define>
 </ui:composition>

@@ -24,6 +24,11 @@
             <to-view-id>/views/inputStudents.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>autoComplete</from-outcome>
+            <to-view-id>/resources/ezcomp/autoComplete.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/views/inputStudents.xhtml</from-view-id>
@@ -55,6 +60,11 @@
         <navigation-case>
             <from-outcome>inputExams</from-outcome>
             <to-view-id>/views/inputExams.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>autoComplete</from-outcome>
+            <to-view-id>/resources/ezcomp/autoComplete.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
     </navigation-rule>

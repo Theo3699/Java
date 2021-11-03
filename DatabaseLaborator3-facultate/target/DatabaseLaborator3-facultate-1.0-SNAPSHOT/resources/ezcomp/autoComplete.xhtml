@@ -1,0 +1,30 @@
+<html xmlns = "http://www.w3.org/1999/xhtml"
+      xmlns:h = "http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:composite = "http://java.sun.com/jsf/composite">
+
+<composite:interface>
+    <composite:attribute name = "examLabel" />
+    <composite:attribute name = "examValue" />
+    <composite:attribute name = "examStartingTime"/>
+    <composite:attribute name = "examStartingTimeValue"/>
+    <composite:attribute name = "examDuration"/>
+    <composite:attribute name = "examDurationValue"/>
+</composite:interface>
+
+<composite:implementation>
+    <h:form>
+        <div class="p-field">
+            <p:outputLabel for="examName" value="#{cc.attrs.examLabel}"/>
+            <p:inputText id="examName" value="#{cc.attrs.examValue}" required="true"
+                         requiredMessage="Exam name is required!"/>
+            <p:outputLabel for="examStartingTimeComp" value="#{cc.attrs.examStartingTime}"/>
+            <p:inputText id="examStartingTimeComp" value="#{cc.attrs.examStartingTimeValue}" required="true"
+                         requiredMessage="Exam name is required!"/>
+            <p:outputLabel for="examDurationComp" value="#{cc.attrs.examDuration}"/>
+            <p:inputText id="examDurationComp" value="#{cc.attrs.examDurationValue}" required="true"
+                         requiredMessage="Exam name is required!"/>
+        </div>
+    </h:form>
+</composite:implementation>
+</html>

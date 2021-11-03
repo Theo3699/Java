@@ -96,4 +96,20 @@ public class Database implements Serializable {
         return queriedStudents;
     }
 
+    public List<String> populateAutocomplete(){
+        List<String> subjects = new ArrayList<>();
+        subjects.add("Mate");
+        subjects.add("Info");
+        subjects.add("Python");
+        subjects.add("Java");
+        subjects.add("IP");
+        subjects.add("Grafuri");
+        subjects.add("ACSO");
+        subjects.add("Logica");
+        subjects.add("Structuri de Date");
+        subjects.add("LFAC");
+
+        return subjects;
+    }
+
 }
