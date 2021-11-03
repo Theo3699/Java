@@ -7,10 +7,7 @@
     <ui:define name="content">
         <div class="card">
             <h:form>
-
                 <h1 class="p-text-center">
-
-
                     <h:inputText id="txt_count" value="#{studentsEnlisted.currentExam}"/>
                 </h1>
                 <p:poll interval="5" listener="#{studentsEnlisted.getNumberOfStudents}" update="txt_count"/>
