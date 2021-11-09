@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="ExamManagerPU" transaction-type="JTA">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/postgres</jta-data-source>
+        <class>com.theo.entities.ExamEntity</class>
+        <class>com.theo.entities.Student</class>
+
+        <properties>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/>
+<!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="jboss.as.jpa.providerModule" value="org.hibernate:5.0"/>
+        </properties>
+    </persistence-unit>
+</persistence>

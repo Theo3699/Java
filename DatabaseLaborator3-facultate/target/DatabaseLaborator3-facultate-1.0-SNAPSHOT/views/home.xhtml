@@ -11,6 +11,7 @@
                     <h:inputText id="txt_count" value="#{studentsEnlisted.currentExam}"/>
                 </h1>
                 <p:poll interval="5" listener="#{studentsEnlisted.getNumberOfStudents}" update="txt_count"/>
+                <h:outputFormat value="#{examRepository.all}"/>
             </h:form>
         </div>
     </ui:define>
