@@ -20,3 +20,12 @@ Created the following components:
 - Use a relational database and JDBC in order to store and retrieve data. (PostgreSQL is recommended).
 - Use at least one non trivial JSF component, for example a data table, a dialog, etc. -->viewTables.xhtml. Used a dataTable
 - Internationalize the user interface and offer support for at least two locales. --> en and ro
+
+## Lab4 --> DatabaseLaborator3-facultate
+Created the following pages and components:
+- [page.xhtml](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/webapp/WEB-INF/templates/page.xhtml): describing the general aspect of the application pages: [header](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/webapp/views/header.xhtml), content, [footer](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/webapp/views/footer.xhtml). The header should display the title and might include a [menu bar](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/webapp/views/menuBar.xhtml).
+The footer will display a copyright notice and the current version of the aplication. The header, footer and the menu bar should all be in separate .xhtml files.
+- [dataView.xhtml](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/webapp/WEB-INF/templates/genericDataView.xhtml): a generic page for displaying data as a list, dataTable, etc.
+- [dataEdit.xhtml](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/webapp/WEB-INF/templates/genericDataEdit.xhtml): a generic page for editing data. This could be a dialog containing a generic form.
+- at least one [composite](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/webapp/resources/ezcomp/autoComplete.xhtml) component using auto-complete. 
+- use the components ajax and [poll](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/webapp/views/home.xhtml) in order to continuously display how many students are enlisted for an exam.
