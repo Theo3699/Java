@@ -1,14 +1,14 @@
 package com.theo.entities;
 
-import com.theo.databaselaborator3facultate.Exam;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 @DiscriminatorValue("1")
-public class ProjectEntity extends Exam {
+public class ProjectEntity extends ExamEntity {
+    @Column(name = "duedate", length = 40)
     private String dueDate;
+    @Column(name = "teamsize")
     private int teamSize;
 
     public void setDueDate(String dueDate) {

@@ -22,7 +22,7 @@
         <setting name="provider-name" value="EclipseLink" />
         <datasource-mapping>
           <factory-entry name="DatabaseLaborator3-facultate" />
-          <factory-entry name="ExamManagerPU" />
+          <factory-entry name="ExamManagerPU" value="e31892b4-6e0d-4a6c-a481-f50020e3b447" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
