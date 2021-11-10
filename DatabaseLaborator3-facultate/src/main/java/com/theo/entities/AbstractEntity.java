@@ -1,6 +1,6 @@
 package com.theo.entities;
 
-public class AbstractEntity<ID> {
+public abstract class AbstractEntity<ID> {
     private ID id;
 
     public AbstractEntity() {
@@ -10,8 +10,8 @@ public class AbstractEntity<ID> {
         this.id = id;
     }
 
-    public ID getId() {
-        return id;
+    public Integer getId() {
+        return (Integer) id;
     }
 
     public void setId(ID id) {

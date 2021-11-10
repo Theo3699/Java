@@ -1,36 +1,41 @@
 package com.theo.beans;
 
+import com.theo.config.JPAConfig;
 import com.theo.entities.ExamEntity;
+import com.theo.repositories.ExamRepository;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
+import javax.faces.bean.ManagedBean;
 import java.util.List;
 
-@Named
+@ManagedBean(name = "examBean")
 @ApplicationScoped
 public class ExamBean {
-    @PersistenceContext
-    private final EntityManager em;
+    private ExamRepository examRepo;
 
-    private List<ExamEntity> exams = new ArrayList<>();
-
-    @Inject
-    public ExamBean(EntityManager em){
-        this.em = em;
-        ExamEntity exam = em.find(ExamEntity.class, 2);
-        exams.add(exam);
-        System.out.println("Here" + exams.get(0).getName());
+    public ExamBean() {
+        JPAConfig jpaConfig = new JPAConfig();
+        examRepo = new ExamRepository(jpaConfig.createEM());
     }
 
-    public EntityManager getEm() {
-        return em;
+    public void getAllExams() {
+        List<ExamEntity> exams = examRepo.getAll();
+        System.out.println("Printing all exams");
+        for (ExamEntity exam : exams) {
+            System.out.println(exam.getName());
+        }
     }
 
-    public List<ExamEntity> getExams() {
-        return exams;
+    public void insertExam() {
+        ExamEntity exam = new ExamEntity();
+        exam.setName("newExam");
+        exam.setDuration("120");
+        exam.setStartingtime("12:00");
+        examRepo.save(exam);
     }
+
+    public void getByName() {
+        examRepo.getByName();
+    }
+
 }

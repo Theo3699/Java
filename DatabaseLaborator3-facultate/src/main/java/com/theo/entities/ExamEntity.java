@@ -1,13 +1,19 @@
 package com.theo.entities;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
 import javax.persistence.*;
 
 @Table(name = "exams")
 @Entity
-public class ExamEntity {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "exam_type",
+                    discriminatorType = DiscriminatorType.INTEGER)
+@NamedQueries({
+        @NamedQuery(name = "Exam.findAll",
+        query = "select e from ExamEntity e order by e.name"),
+        @NamedQuery(name = "Exam.findByName",
+        query = "select e from ExamEntity e where e.name = :name")
+})
+public class ExamEntity extends AbstractEntity<Integer>{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

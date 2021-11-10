@@ -4,7 +4,13 @@ import javax.persistence.*;
 
 @Table(name = "students")
 @Entity
-public class Student {
+@NamedQueries({
+        @NamedQuery(name = "Student.findAll",
+                query = "select s from StudentEntity s order by s.name"),
+        @NamedQuery(name = "Student.findByName",
+                query = "select s from StudentEntity s where s.name = :name")
+})
+public class StudentEntity extends AbstractEntity<Integer>{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

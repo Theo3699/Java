@@ -4,51 +4,56 @@ package com.theo.repositories;
 import com.theo.databaselaborator3facultate.Exam;
 import com.theo.entities.ExamEntity;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
-@Named
-@ApplicationScoped
-public class ExamRepository extends DataRepository<Exam, String>{
-
-    public ExamRepository() {
-
-    }
+public class ExamRepository extends DataRepository<ExamEntity, Integer> {
 
     @Inject
     public ExamRepository(EntityManager em) {
         this.examManagerPU = em;
-        ExamEntity exam = em.find(ExamEntity.class, 2);
-        System.out.println("Here" + exam.getName());
     }
 
     @Override
-    public Exam getById(String s) {
+    public ExamEntity getById(Integer s) {
         return null;
     }
 
     @Override
-    public void updateEntities(List<Exam> entities) {
-        for (Exam exam : entities){
+    public void updateEntities(List<ExamEntity> entities) {
+        for (ExamEntity exam : entities) {
             save(exam);
         }
     }
 
     @Override
-    public List<Exam> getAll() {
-        Query query = examManagerPU.createQuery("SELECT e FROM ExamEntity e");
-        ((Collection<ExamEntity>) query.getResultList()).stream().map(ExamEntity::getName).forEach(System.out::println);
-        return new ArrayList<>();
+    public List<ExamEntity> getAll() {
+        Query query = examManagerPU.createNamedQuery("Exam.findAll");
+        List<ExamEntity> exams = ((Collection<ExamEntity>) query.getResultList()).stream().collect(Collectors.toList());
+        return exams;
     }
 
     @Override
-    public void save(Exam exam) {
+    public void save(ExamEntity exam) {
+        examManagerPU.getTransaction().begin();
         examManagerPU.persist(exam);
+        examManagerPU.getTransaction().commit();
+        System.out.println("Exams database updated!");
+    }
+
+    @Override
+    public void getByName() {
+        Query query = examManagerPU.createNamedQuery("Exam.findByName");
+        query.setParameter("name", "java");
+        Collection examResults = query.getResultList();
+        for (Object exam : examResults) {
+            System.out.println("GetByName(): " + ((ExamEntity) exam).getName());
+        }
+        examManagerPU.close();
     }
 }

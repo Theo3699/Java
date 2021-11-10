@@ -11,7 +11,12 @@
                     <h:inputText id="txt_count" value="#{studentsEnlisted.currentExam}"/>
                 </h1>
                 <p:poll interval="5" listener="#{studentsEnlisted.getNumberOfStudents}" update="txt_count"/>
-                <h:outputFormat value="#{examRepository.all}"/>
+                <h:outputFormat value="#{examBean.getAllExams()}"/>
+                <h:outputFormat value="#{examBean.insertExam()}"/>
+                <h:outputFormat value="#{examBean.getByName()}"/>
+                <h:outputFormat value="#{studentBean.getAllStudents()}"/>
+                <h:outputFormat value="#{studentBean.insertStudent()}"/>
+                <h:outputFormat value="#{studentBean.getByName()}"/>
             </h:form>
         </div>
     </ui:define>

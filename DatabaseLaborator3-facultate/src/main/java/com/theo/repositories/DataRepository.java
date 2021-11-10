@@ -30,4 +30,6 @@ public abstract class DataRepository<T extends AbstractEntity<ID>, ID> {
     public abstract List<T> getAll();
 
     public abstract void save(T t);
+
+    public abstract void getByName();
 }
