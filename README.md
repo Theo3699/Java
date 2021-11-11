@@ -30,7 +30,7 @@ The footer will display a copyright notice and the current version of the aplica
 - at least one [composite](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/webapp/resources/ezcomp/autoComplete.xhtml) component using auto-complete. 
 - use the components ajax and [poll](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/webapp/views/home.xhtml) in order to continuously display how many students are enlisted for an exam.
 
-##L Lab 5 --> DatabaseLaborator3-facultate
+## Lab 5 --> DatabaseLaborator3-facultate
 Implemented the following:
 - Defined the [persistence](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/resources/META-INF/persistence.xml) unit using a data source configured as a JDBC Resource.
 - Created the [EntityManager](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/config/JPAConfig.java) objects using dependency injection.
