@@ -33,7 +33,7 @@ The footer will display a copyright notice and the current version of the aplica
 ##L Lab 5 --> DatabaseLaborator3-facultate
 Implemented the following:
 - Defined the [persistence](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/resources/META-INF/persistence.xml) unit using a data source configured as a JDBC Resource.
-- Created the (EntityManager)[https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/config/JPAConfig.java] objects using dependency injection.
+- Created the [EntityManager](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/config/JPAConfig.java) objects using dependency injection.
 - Defined the [mappings](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/entities/ExamEntity.java) using JPA-only annotations.
 - Implemented the [repository](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/repositories/ExamRepository.java) classes using JPA-QL.
 - Defined at least two type of classes representing exams. (ProjectEntity and PresentationEntity)
