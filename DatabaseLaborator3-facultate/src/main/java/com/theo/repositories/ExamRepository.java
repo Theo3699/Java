@@ -1,18 +1,20 @@
 package com.theo.repositories;
 
-
-import com.theo.databaselaborator3facultate.Exam;
 import com.theo.entities.ExamEntity;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Stateless
 public class ExamRepository extends DataRepository<ExamEntity, Integer> {
+
+    public ExamRepository() {
+    }
 
     @Inject
     public ExamRepository(EntityManager em) {
@@ -54,6 +56,5 @@ public class ExamRepository extends DataRepository<ExamEntity, Integer> {
         for (Object exam : examResults) {
             System.out.println("GetByName(): " + ((ExamEntity) exam).getName());
         }
-        examManagerPU.close();
     }
 }

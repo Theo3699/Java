@@ -1,8 +1,8 @@
 package com.theo.repositories;
 
-import com.theo.entities.ExamEntity;
 import com.theo.entities.StudentEntity;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -10,7 +10,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Stateless
 public class StudentRepository extends DataRepository<StudentEntity, Integer> {
+
+    public StudentRepository() {
+    }
 
     @Inject
     public StudentRepository(EntityManager em) {
@@ -52,6 +56,5 @@ public class StudentRepository extends DataRepository<StudentEntity, Integer> {
         for (Object student : studentResults) {
             System.out.println("GetByName(): " + ((StudentEntity) student).getName());
         }
-        examManagerPU.close();
     }
 }

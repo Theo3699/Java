@@ -4,18 +4,33 @@ import com.theo.config.JPAConfig;
 import com.theo.entities.StudentEntity;
 import com.theo.repositories.StudentRepository;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.ejb.EJB;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.enterprise.context.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import java.util.List;
 
 @ManagedBean(name="studentBean")
 @ApplicationScoped
+@TransactionAttribute(TransactionAttributeType.REQUIRED)
 public class StudentBean {
+
+    @EJB
     private StudentRepository studentRepo;
 
-    public StudentBean() {
+    @PostConstruct
+    public void init() {
         JPAConfig jpaConfig = new JPAConfig();
         studentRepo = new StudentRepository(jpaConfig.createEM());
+        System.out.println("StudentBean: init'ed");
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("StudentBean: destroyed");
     }
 
     public void getAllStudents() {
