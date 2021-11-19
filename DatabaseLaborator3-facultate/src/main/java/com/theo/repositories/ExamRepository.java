@@ -7,6 +7,8 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -63,6 +65,19 @@ public class ExamRepository extends DataRepository<ExamEntity, Integer> {
         query.setParameter("name", examName);
         Collection examResults = query.getResultList();
         return (ExamEntity) examResults.iterator().next();
+    }
+
+    public HashMap<String, String> getExamAndResources() {
+        HashMap<String, String> examToResource = new HashMap<String, String>();
+        Query query = examManagerPU.createNamedQuery("Exam.andResources");
+        Collection examResults = query.getResultList();
+        Iterator<ExamEntity> examEntityIterator = examResults.iterator();
+        while(examEntityIterator.hasNext())
+        {
+            ExamEntity exam = examEntityIterator.next();
+            examToResource.put(exam.getName(), exam.getResources());
+        }
+        return examToResource;
     }
 
 }

@@ -15,10 +15,30 @@ public class AssignmentStatefulBean implements StatefulBeanRemote {
     @Inject
     private ExamRepository examRepo;
 
+    @Inject
+    private ResourcesBean resourcesBean;
+
     @Override
-    public void test() {
-        ExamEntity exam = examRepo.getBySpecificName("acso");
-        System.out.println("AICIAAAAA " + exam.getName());
+    public void assignProjector() {
+        if (resourcesBean.getAvailableProjectors() > 0) {
+            ExamEntity exam = examRepo.getBySpecificName("acso");
+            if (!exam.getResources().isEmpty()) {
+                exam.setResources(exam.getResources() + ", projector");
+            } else {
+                exam.setResources("projector");
+            }
+        }
     }
 
+    @Override
+    public void assignRoom() {
+        if (resourcesBean.getAvailableRooms() > 0) {
+            ExamEntity exam = examRepo.getBySpecificName("acso");
+            if (!exam.getResources().isEmpty()) {
+                exam.setResources(exam.getResources() + ", room");
+            } else {
+                exam.setResources("room");
+            }
+        }
+    }
 }

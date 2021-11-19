@@ -54,11 +54,13 @@ public class ResourcesBean {
         resourcesRepo.getByName();
     }
 
-    public void getAvailableProjectors() {
+    public int getAvailableProjectors() {
         System.out.println("Available projectors: " + resourcesRepo.getAvailableProjectors());
+        return resourcesRepo.getAvailableProjectors();
     }
 
-    public void getAvailableRooms() {
+    public int getAvailableRooms() {
         System.out.println("Available rooms: " + resourcesRepo.getAvailableRooms());
+        return resourcesRepo.getAvailableRooms();
     }
 }

@@ -12,16 +12,12 @@
                 </h1>
                 <p:poll interval="5" listener="#{studentsEnlisted.getNumberOfStudents}" update="txt_count"/>
                 <h:outputFormat value="#{examBean.getAllExams()}"/>
-<!--                <h:outputFormat value="#{examBean.insertExam()}"/>-->
                 <h:outputFormat value="#{examBean.getByName()}"/>
                 <h:outputFormat value="#{studentBean.getAllStudents()}"/>
-<!--                <h:outputFormat value="#{studentBean.insertStudent()}"/>-->
                 <h:outputFormat value="#{studentBean.getByName()}"/>
-<!--                <h:outputFormat value="#{resourcesBean.insertResource()}"/>-->
                 <h:outputFormat value="#{resourcesBean.getByName()}"/>
-                <h:outputFormat value="#{assignmentBeanManager.test()}"/>
-                <h:outputFormat value="#{resourcesBean.getAvailableProjectors()}"/>
-                <h:outputFormat value="#{resourcesBean.getAvailableRooms()}"/>
+                <h:outputFormat value="#{assignmentBeanManager.assignProjector()}"/>
+                <h:outputFormat value="#{singletonManager.startup()}"/>
             </h:form>
         </div>
     </ui:define>

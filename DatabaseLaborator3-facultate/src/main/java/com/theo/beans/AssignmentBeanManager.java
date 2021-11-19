@@ -17,7 +17,11 @@ public class AssignmentBeanManager {
     public AssignmentBeanManager() {
     }
 
-    public void test(){
-        statefulBean.test();
+    public void assignProjector(){
+        statefulBean.assignProjector();
+    }
+
+    public void assignRoom() {
+        statefulBean.assignRoom();
     }
 }

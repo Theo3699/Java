@@ -4,5 +4,6 @@ import javax.ejb.Remote;
 
 @Remote
 public interface StatefulBeanRemote {
-    public void test();
+    public void assignProjector();
+    public void assignRoom();
 }

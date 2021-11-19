@@ -11,7 +11,9 @@ import javax.persistence.*;
         @NamedQuery(name = "Exam.findAll",
         query = "select e from ExamEntity e order by e.name"),
         @NamedQuery(name = "Exam.findByName",
-        query = "select e from ExamEntity e where e.name = :name")
+        query = "select e from ExamEntity e where e.name = :name"),
+        @NamedQuery(name = "Exam.andResources",
+        query = "select e from ExamEntity e where e.resources is not null")
 })
 public class ExamEntity extends AbstractEntity<Integer>{
     @Id
