@@ -37,3 +37,10 @@ Implemented the following:
 - Defined the [mappings](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/entities/ExamEntity.java) using JPA-only annotations.
 - Implemented the [repository](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/repositories/ExamRepository.java) classes using JPA-QL.
 - Defined at least two type of classes representing exams. (ProjectEntity and PresentationEntity)
+
+## Lab 6 --> DatabaseLaborator3-facultate
+- Used the support offered by the EJB technology for implementing transactions.
+The following enterprise beans were implemented:
+- A [stateless](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/repositories/ResourcesRepository.java) session bean that offers methods for checking the availability of a resource.
+- A [stateful](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/beans/AssignmentStatefulBean.java) session bean responsible with the assignment of one or more resource to a specific exam.
+- A [singleton](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/beans/SingletonCurrentAssignments.java) session bean that keeps an in-memory map of the current assignments.
