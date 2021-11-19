@@ -28,6 +28,9 @@ public class ExamEntity extends AbstractEntity<Integer>{
     @Column(name = "duration", nullable = false, length = 40)
     private String duration;
 
+    @Column(name = "resources", length = 100)
+    private String resources;
+
     public String getDuration() {
         return duration;
     }
@@ -58,5 +61,13 @@ public class ExamEntity extends AbstractEntity<Integer>{
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public void setResources(String resources) {
+        this.resources = resources;
+    }
+
+    public String getResources() {
+        return resources;
     }
 }

@@ -6,6 +6,7 @@
         <jta-data-source>java:/postgres</jta-data-source>
         <class>com.theo.entities.ExamEntity</class>
         <class>com.theo.entities.StudentEntity</class>
+        <class>com.theo.entities.ResourceEntity</class>
 
         <properties>
             <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>

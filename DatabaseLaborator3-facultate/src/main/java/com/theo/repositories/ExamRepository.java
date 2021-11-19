@@ -57,4 +57,12 @@ public class ExamRepository extends DataRepository<ExamEntity, Integer> {
             System.out.println("GetByName(): " + ((ExamEntity) exam).getName());
         }
     }
+
+    public ExamEntity getBySpecificName(String examName) {
+        Query query = examManagerPU.createNamedQuery("Exam.findByName");
+        query.setParameter("name", examName);
+        Collection examResults = query.getResultList();
+        return (ExamEntity) examResults.iterator().next();
+    }
+
 }
