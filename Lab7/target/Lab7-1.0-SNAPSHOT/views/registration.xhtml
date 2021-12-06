@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>login</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <div class="card">
+        <p:outputLabel value="Username"/>
+        <p:inputText id="username" value="#{userBean.username}"></p:inputText>
+
+        <p:outputLabel value="Password"/>
+        <p:password id="password" value="#{userBean.password}" toggleMask="true" redisplay="true"></p:password>
+
+        <p:outputLabel value="Role"/>
+        <p:selectOneMenu id="option" value="#{userBean.admin}">
+            <f:selectItem itemLabel="Admin" itemValue="True"/>
+            <f:selectItem itemLabel="User" itemValue="False"/>
+        </p:selectOneMenu>
+
+        <p:commandButton action="#{userRepository.save(userBean)}"
+                         value="Create"></p:commandButton>
+        </div>
+
+
+    </h:form>
+</h:body>
+</html>
