@@ -40,8 +40,7 @@ public class Login implements Serializable {
             if (LoginDAO.isAdmin(user, pwd)) {
                 System.out.println("forwarding to admin page");
                 return "admin";
-            }
-            else{
+            } else {
                 System.out.println("forwarding to user page");
                 return "user";
             }

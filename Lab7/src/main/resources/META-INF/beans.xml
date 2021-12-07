@@ -4,4 +4,9 @@
        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                       http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd"
        bean-discovery-mode="all">
+
+    <decorators>
+        <class>ro.theo.lab7.config.ValidateTimeFrameDecorator</class>
+    </decorators>
+
 </beans>
