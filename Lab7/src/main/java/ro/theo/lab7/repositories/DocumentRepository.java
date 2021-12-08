@@ -4,6 +4,7 @@ import ro.theo.lab7.beans.DocumentBean;
 import ro.theo.lab7.entities.Document;
 
 import javax.ejb.Stateless;
+import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -16,6 +17,9 @@ public class DocumentRepository {
     @Inject
     protected EntityManager userManagerPU;
 
+    protected @Inject
+    Event<Document> documentEvent;
+
     public DocumentRepository() {
     }
 
@@ -26,6 +30,7 @@ public class DocumentRepository {
         documentEntity.setContent(doc.getContent());
         documentEntity.setName(doc.getName());
         userManagerPU.persist(documentEntity);
+        documentEvent.fire(documentEntity);
         userManagerPU.getTransaction().commit();
     }
 

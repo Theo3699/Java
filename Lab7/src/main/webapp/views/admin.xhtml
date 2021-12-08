@@ -8,6 +8,23 @@
 </h:head>
 
 <h:body>
-    hello admin!
+    <div class="card">
+        <p:dataTable id="documentDT" var="document" value="#{database.documents}">
+            <p:column headerText="Registration Number">
+                <h:outputText value="#{document.id}"/>
+            </p:column>
+            <p:column headerText="Name">
+                <h:outputText value="#{document.name}"/>
+            </p:column>
+
+            <p:column headerText="Author">
+                <h:outputText value="#{document.author}"/>
+            </p:column>
+
+            <p:column headerText="Content">
+                <h:outputText value="#{document.content}"/>
+            </p:column>
+        </p:dataTable>
+    </div>
 </h:body>
 </html>

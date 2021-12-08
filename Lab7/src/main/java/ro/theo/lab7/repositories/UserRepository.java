@@ -1,6 +1,7 @@
 package ro.theo.lab7.repositories;
 
 import ro.theo.lab7.beans.UserBean;
+import ro.theo.lab7.config.MyInterceptor;
 import ro.theo.lab7.config.MyInterceptorBinding;
 import ro.theo.lab7.entities.User;
 
@@ -8,6 +9,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
+import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
@@ -35,6 +37,7 @@ public class UserRepository implements RepositoryInterface {
     }
 
     @Override
+    @Interceptors(MyInterceptor.class)
     public void save(UserBean user) {
         userManagerPU.getTransaction().begin();
         User userEntiy = new User();
@@ -49,13 +52,11 @@ public class UserRepository implements RepositoryInterface {
         Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());
         int hour = cal.get(Calendar.HOUR_OF_DAY);
-        if (hour <= 20 && hour >= 8) {
+        if (hour <= 24 && hour >= 8) {
             save(user);
             System.out.println("Registration completed");
         } else {
             System.out.println("Can't register now. Try later!");
-            FacesContext context = FacesContext.getCurrentInstance();
-            context.addMessage("kilometres", new FacesMessage("Message 1"));
         }
     }
 }

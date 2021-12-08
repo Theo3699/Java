@@ -8,5 +8,8 @@
     <decorators>
         <class>ro.theo.lab7.config.ValidateTimeFrameDecorator</class>
     </decorators>
+    <interceptors>
+        <class>ro.theo.lab7.config.MyInterceptor</class>
+    </interceptors>
 
 </beans>

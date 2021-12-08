@@ -2,12 +2,21 @@ package ro.theo.lab7.beans;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @ManagedBean
 @RequestScoped
 public class DocumentBean {
+    private Integer id;
+    @NotNull
+    @Size(max=100)
     private String name;
+    @NotNull
+    @Size(max=100)
     private String author;
+    @NotNull
+    @Size(min=20, max=1000)
     private String content;
 
     public DocumentBean() {
@@ -19,11 +28,26 @@ public class DocumentBean {
         this.content = content;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public DocumentBean(Integer id, String name, String author, String content) {
+        this.id = id;
+        this.name = name;
+        this.author = author;
+        this.content = content;
+    }
+
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(@Size(min = 20) String name) {
         this.name = name;
     }
 
@@ -31,7 +55,7 @@ public class DocumentBean {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(@Size(min = 20) String author) {
         this.author = author;
     }
 
@@ -39,7 +63,7 @@ public class DocumentBean {
         return content;
     }
 
-    public void setContent(String content) {
+    public void setContent(@Size(min = 20) String content) {
         this.content = content;
     }
 }

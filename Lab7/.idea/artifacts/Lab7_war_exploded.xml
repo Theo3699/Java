@@ -31,6 +31,10 @@
           <element id="library" level="project" name="Maven: org.jvnet.staxex:stax-ex:1.8" />
           <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" />
           <element id="library" level="project" name="Maven: org.primefaces:primefaces:10.0.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:2.0.0-alpha4" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.0-alpha4" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.22" />
         </element>
       </element>
       <element id="directory" name="META-INF">

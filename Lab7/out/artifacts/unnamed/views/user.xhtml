@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>login</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <div class="card">
+            <div class="ui-fluid">
+                <div class="p-field">
+                    <p:outputLabel for="documentName" value="Name"/>
+                    <p:inputText id="documentName" value="#{documentBean.name}" required="true"
+                                 requiredMessage="Mandatory field"/>
+                </div>
+                <div class="p-field">
+                    <p:outputLabel for="documentAuthor" value="Author"/>
+                    <p:inputText id="documentAuthor" value="#{documentBean.author}" required="true"
+                                 requiredMessage="Mandatory field"/>
+                </div>
+                <div class="p-field">
+                    <p:outputLabel for="documentContent" value="Content"/>
+                    <p:inputText id="documentContent" value="#{documentBean.content}" required="true"
+                                 requiredMessage="Mandatory field"/>
+                </div>
+                <div class="ui-colorpicker_submit">
+                    <p:commandButton id="submit_exam" value="Submit document" action="#{database.submit(documentBean)}"/>
+                </div>
+            </div>
+        </div>
+    </h:form>
+</h:body>
+</html>

@@ -4,8 +4,8 @@ import javax.interceptor.AroundInvoke;
 import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
 
-@Interceptor
 @MyInterceptorBinding
+@Interceptor
 public class MyInterceptor {
     @AroundInvoke
     public Object log(InvocationContext context) throws Exception {

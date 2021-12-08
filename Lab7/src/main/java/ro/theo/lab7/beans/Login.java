@@ -2,14 +2,15 @@ package ro.theo.lab7.beans;
 
 import ro.theo.lab7.DAOs.LoginDAO;
 
-import java.io.IOException;
-import java.io.Serializable;
-import java.sql.SQLException;
-
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import java.io.IOException;
+import java.io.Serializable;
+import java.sql.SQLException;
+
+import static ro.theo.lab7.config.Logger.log;
 
 @ManagedBean
 @SessionScoped
@@ -37,6 +38,7 @@ public class Login implements Serializable {
     public String validateUsernamePassword() throws SQLException, IOException {
         boolean valid = LoginDAO.validate(user, pwd);
         if (valid) {
+            log("Login successful with credentials user: " + user + ", password: " + pwd);
             if (LoginDAO.isAdmin(user, pwd)) {
                 System.out.println("forwarding to admin page");
                 return "admin";
