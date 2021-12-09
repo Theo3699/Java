@@ -44,3 +44,17 @@ The following enterprise beans were implemented:
 - A [stateless](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/repositories/ResourcesRepository.java) session bean that offers methods for checking the availability of a resource.
 - A [stateful](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/beans/AssignmentStatefulBean.java) session bean responsible with the assignment of one or more resource to a specific exam.
 - A [singleton](https://github.com/Theo3699/Java/blob/main/DatabaseLaborator3-facultate/src/main/java/com/theo/beans/SingletonCurrentAssignments.java) session bean that keeps an in-memory map of the current assignments.
+
+## Lab 7 --> Lab7
+Created a JSF application for managing the submission of documents into a repository. The application allows the following:
+- An [authentication](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/beans/Login.java) mechanism based on username and password
+- Register new users and assign them a specific role (Admin, User)
+- Specify a time frame, in which registration is open for users and submissions.
+- The possibility to upload a document (for [authors](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/webapp/views/user.xhtml)) and to view all uploaded documents (for [admin](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/webapp/views/admin.xhtml)). Each uploaded document will have a uniquely generated registration number. All submissions will be logged in a text file.
+Used Contexts and Dependency Injection (CDI) for:
+- the management of application's beans; ([@Inject](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/repositories/DocumentRepository.java)) and transactions ([@Transactional](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/repositories/UserRepository.java))
+- decoupling the components using dependency injection; ([@Produces](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/config/JPAConfig.java))
+- decoupling orthogonal concerns, such as logging; ([@Interceptor](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/config/MyInterceptor.java))
+- decoupling bussines concerns, such as verifying the date for operations like registration and submission ([@Decorator](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/config/ValidateTimeFrameDecorator.java));
+- implementing at least one event-based comunication ([@Observes](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/beans/Database.java));
+- data validation, using Bean Validation [annotations](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/beans/DocumentBean.java).
