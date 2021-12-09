@@ -51,6 +51,7 @@ Created a JSF application for managing the submission of documents into a reposi
 - Register new users and assign them a specific role (Admin, User)
 - Specify a time frame, in which registration is open for users and submissions.
 - The possibility to upload a document (for [authors](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/webapp/views/user.xhtml)) and to view all uploaded documents (for [admin](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/webapp/views/admin.xhtml)). Each uploaded document will have a uniquely generated registration number. All submissions will be logged in a text file.
+
 Used Contexts and Dependency Injection (CDI) for:
 - the management of application's beans; ([@Inject](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/repositories/DocumentRepository.java)) and transactions ([@Transactional](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/repositories/UserRepository.java))
 - decoupling the components using dependency injection; ([@Produces](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/config/JPAConfig.java))
