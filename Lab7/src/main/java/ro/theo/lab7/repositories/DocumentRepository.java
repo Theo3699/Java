@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 @Stateless
 public class DocumentRepository {
+
     @Inject
     protected EntityManager userManagerPU;
 
@@ -37,5 +38,22 @@ public class DocumentRepository {
     public List<Document> getAll() {
         Query query = userManagerPU.createNamedQuery("Document.getAll");
         return ((Collection<Document>) query.getResultList()).stream().collect(Collectors.toList());
+    }
+
+    public Document findByName(String name){
+        Query query = userManagerPU.createNamedQuery("Document.find");
+        query.setParameter("name", name);
+        Collection documentResults = query.getResultList();
+        return (Document) documentResults.iterator().next();
+    }
+
+    public void remove(String name) {
+        Query query = userManagerPU.createNamedQuery("Document.find");
+        query.setParameter("name", name);
+        Collection documentResults = query.getResultList();
+        Document entryToBeRemoved = findByName(name);
+        userManagerPU.getTransaction().begin();
+        userManagerPU.remove(entryToBeRemoved);
+        userManagerPU.getTransaction().commit();
     }
 }

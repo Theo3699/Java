@@ -20,4 +20,58 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
+
+    <security-role>
+        <description>Administrator</description>
+        <role-name>admin</role-name>
+    </security-role>
+    <security-role>
+        <description>Management</description>
+        <role-name>manager</role-name>
+    </security-role>
+    <security-role>
+        <description>Normal user</description>
+        <role-name>user</role-name>
+    </security-role>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>JDBCRealm</realm-name>
+        <form-login-config>
+            <form-login-page>/views/index.xhtml</form-login-page>
+            <form-error-page>/views/index.xhtml</form-error-page>
+        </form-login-config>
+    </login-config>
+
+    <security-constraint>
+        <display-name>Admin Only</display-name>
+        <web-resource-collection>
+            <web-resource-name>User management</web-resource-name>
+            <url-pattern>/views/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>User Only</display-name>
+        <web-resource-collection>
+            <web-resource-name>Application config</web-resource-name>
+            <url-pattern>/views/user/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+            <role-name>user</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <error-page>
+        <error-code>403</error-code>
+        <location>/views/forbidden.xhtml</location>
+    </error-page>
+<!--    <login-config>-->
+<!--        <auth-method>-->
+
+<!--        </auth-method>-->
+<!--    </login-config>-->
 </web-app>

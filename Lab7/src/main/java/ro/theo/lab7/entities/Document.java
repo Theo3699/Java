@@ -7,7 +7,9 @@ import javax.persistence.*;
 })
 @NamedQueries({
         @NamedQuery(name = "Document.getAll",
-                query = "select d from Document d order by d.name")
+                query = "select d from Document d order by d.name"),
+        @NamedQuery(name = "Document.find",
+                query = "select d from Document d where d.author = :name")
 })
 @Entity
 public class Document {
@@ -55,5 +57,15 @@ public class Document {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Document{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", content='" + content + '\'' +
+                '}';
     }
 }

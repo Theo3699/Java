@@ -37,6 +37,7 @@ public class Login implements Serializable {
     //validate login
     public String validateUsernamePassword() throws SQLException, IOException {
         boolean valid = LoginDAO.validate(user, pwd);
+        System.out.println(valid);
         if (valid) {
             log("Login successful with credentials user: " + user + ", password: " + pwd);
             if (LoginDAO.isAdmin(user, pwd)) {

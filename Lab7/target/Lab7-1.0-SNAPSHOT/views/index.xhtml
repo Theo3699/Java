@@ -15,7 +15,7 @@
         <p:outputLabel value="Password" />
         <p:password id="password" value="#{login.pwd}" toggleMask="true" redisplay="true"></p:password>
 
-        <p:commandButton action="#{login.validateUsernamePassword()}"
+        <p:commandButton action="#{login.validateUsernamePassword}"
                          value="Login"></p:commandButton>
 
         <p:commandButton action="#{registration.goToRegistrationPage()}" value="Create New Account"></p:commandButton>
