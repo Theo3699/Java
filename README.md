@@ -67,4 +67,5 @@ Created RESTful Web services using JAX-RS that allow the interaction with at lea
 - [DeleteDocumentService](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/services/DeleteDocumentService.java) that allows deleting an existing document from the database;
 - [ViewDocumentService](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/services/ViewDocumentService.java) that returns a "list" of the documents there were uploaded. The parameter of the web method will be an identifier for the user. If the parameter is null, then all documents should be considered.
 - Use JSON for representing consumed or produced data.
+
 Created a filter that will act as a cache for the ViewDocumentService, storing the parameters of the incoming request and the returned responses. If the documents are modified by the application, reset the cache accordingly.
