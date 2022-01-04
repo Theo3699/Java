@@ -69,3 +69,5 @@ Created RESTful Web services using JAX-RS that allow the interaction with at lea
 - Use JSON for representing consumed or produced data.
 
 Created a filter that will act as a cache for the ViewDocumentService, storing the parameters of the incoming request and the returned responses. If the documents are modified by the application, reset the cache accordingly.
+
+## Lab 9 --> Lab7 + microservice
