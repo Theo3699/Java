@@ -70,7 +70,7 @@ Created RESTful Web services using JAX-RS that allow the interaction with at lea
 
 Created a filter that will act as a cache for the ViewDocumentService, storing the parameters of the incoming request and the returned responses. If the documents are modified by the application, reset the cache accordingly.
 
-## Lab 9 -> first three bullets are in Lab7, the other points are in microservice
+## Lab 9 -> first three bullets are in Lab7, the other three bullets are in microservice
 Add security features to the application created in the previous lab, using standard mechanisms offered by Java EE for:
 - Authentication, using a JDBC Realm;
 - Controlling the access to Web resources, using Web constraints;
