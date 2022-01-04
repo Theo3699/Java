@@ -59,3 +59,12 @@ Used Contexts and Dependency Injection (CDI) for:
 - decoupling bussines concerns, such as verifying the date for operations like registration and submission ([@Decorator](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/config/ValidateTimeFrameDecorator.java));
 - implementing at least one event-based comunication ([@Observes](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/beans/Database.java));
 - data validation, using Bean Validation [annotations](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/beans/DocumentBean.java).
+
+## Lab 8 --> Lab7
+Created RESTful Web services using JAX-RS that allow the interaction with at least one JPA entity, implementing CRUD operations.
+- [AddDocumentService](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/services/AddDocumentService.java) that allows adding a new document;
+- [UpdateDocumentService](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/services/UpdateDocumentService.java) that allows replacing an existing document;
+- [DeleteDocumentService](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/services/DeleteDocumentService.java) that allows deleting an existing document from the database;
+- [ViewDocumentService](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/services/ViewDocumentService.java) that returns a "list" of the documents there were uploaded. The parameter of the web method will be an identifier for the user. If the parameter is null, then all documents should be considered.
+- Use JSON for representing consumed or produced data.
+Created a filter that will act as a cache for the ViewDocumentService, storing the parameters of the incoming request and the returned responses. If the documents are modified by the application, reset the cache accordingly.
