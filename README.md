@@ -70,8 +70,12 @@ Created RESTful Web services using JAX-RS that allow the interaction with at lea
 
 Created a filter that will act as a cache for the ViewDocumentService, storing the parameters of the incoming request and the returned responses. If the documents are modified by the application, reset the cache accordingly.
 
-## Lab 9 -> first three bullets are in Lab7, the other three bullets are in microservice
+## Lab 9 -> first three bullets are in Lab7, the other two bullets are in microservice
 Add security features to the application created in the previous lab, using standard mechanisms offered by Java EE for:
 - Authentication, using a JDBC Realm;
 - Controlling the access to Web resources, using Web constraints;
 - Securing the business logic components and REST services.
+
+Expose a CRUD REST [resource](https://github.com/Theo3699/Java/blob/main/microservice/src/main/java/ro/theo/microservice/services/ViewDocumentService.java) from the previous lab as a microservice.
+- Run the microservice using an Eclipse Microprofile server implementation (Microprofile 4.0 + Wildfly)
+- Create an [additional](https://github.com/Theo3699/Java/blob/main/microservice/src/main/java/ro/theo/microservice/services/ClientController.java) microservice that will invoke the first one.
