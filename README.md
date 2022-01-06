@@ -72,9 +72,9 @@ Created a [filter](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java
 
 ## Lab 9 -> first three bullets are in Lab7, the other two bullets are in microservice
 Add security features to the application created in the previous lab, using standard mechanisms offered by Java EE for:
-- Authentication, using a JDBC Realm;
+- Authentication, using a JDBC Realm (followed all the steps in the course and http://www.mastertheboss.com/jbossas/jboss-security/configure-an-elytron-jdbc-realm-on-wildfly-11/ and other tutorials in order to set the jdbc realm. However, i cannot start the server once the configurations are made  (i am getting an error while deploying the artifact). I have added these "comments" in order to see that i really tried :) );
 - Controlling the access to Web resources, using Web constraints;
-- Securing the business logic components and REST services.
+- [Securing](https://github.com/Theo3699/Java/blob/main/Lab7/src/main/java/ro/theo/lab7/services/ViewDocumentService.java) the business logic components and REST services.
 
 Expose a CRUD REST [resource](https://github.com/Theo3699/Java/blob/main/microservice/src/main/java/ro/theo/microservice/services/ViewDocumentService.java) from the previous lab as a microservice.
 - Run the microservice using an Eclipse Microprofile server implementation (Microprofile 4.0 + Wildfly)
