@@ -69,9 +69,4 @@
         <error-code>403</error-code>
         <location>/views/forbidden.xhtml</location>
     </error-page>
-<!--    <login-config>-->
-<!--        <auth-method>-->
-
-<!--        </auth-method>-->
-<!--    </login-config>-->
 </web-app>

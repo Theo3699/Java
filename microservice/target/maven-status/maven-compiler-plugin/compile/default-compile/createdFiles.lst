@@ -1,0 +1,17 @@
+ro\theo\microservice\health\ServiceLiveHealthCheck.class
+ro\theo\microservice\MicroserviceRestApplication.class
+ro\theo\microservice\entities\Document.class
+ro\theo\microservice\services\AddDocumentService.class
+ro\theo\microservice\services\ViewDocumentServiceInterface.class
+ro\theo\microservice\repositories\DocumentRepository.class
+ro\theo\microservice\openapi\Destination.class
+ro\theo\microservice\config\ApplicationConfig.class
+ro\theo\microservice\services\ClientController.class
+ro\theo\microservice\HelloController.class
+ro\theo\microservice\health\ServiceReadyHealthCheck.class
+ro\theo\microservice\openapi\BookingController.class
+ro\theo\microservice\config\JPAConfig.class
+ro\theo\microservice\beans\DocumentBean.class
+ro\theo\microservice\config\ConfigTestController.class
+ro\theo\microservice\openapi\Booking.class
+ro\theo\microservice\services\ViewDocumentService.class

@@ -6,7 +6,6 @@
     <persistence-unit name="DocumentPU" transaction-type="JTA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>java:/postgres</jta-data-source>
-<!--        <class>ro.theo.lab7.entities.User</class>-->
         <class>ro.theo.microservice.entities.Document</class>
     </persistence-unit>
 </persistence>

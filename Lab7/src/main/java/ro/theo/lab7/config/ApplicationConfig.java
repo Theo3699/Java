@@ -1,6 +1,5 @@
 package ro.theo.lab7.config;
 
-//import ro.theo.lab7.controllers.DocumentController;
 import ro.theo.lab7.services.AddDocumentService;
 import ro.theo.lab7.services.DeleteDocumentService;
 import ro.theo.lab7.services.UpdateDocumentService;

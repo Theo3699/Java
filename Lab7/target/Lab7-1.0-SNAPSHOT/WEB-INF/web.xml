@@ -43,9 +43,30 @@
         </form-login-config>
     </login-config>
 
-<!--    <login-config>-->
-<!--        <auth-method>-->
+    <security-constraint>
+        <display-name>Admin Only</display-name>
+        <web-resource-collection>
+            <web-resource-name>User management</web-resource-name>
+            <url-pattern>/views/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>User Only</display-name>
+        <web-resource-collection>
+            <web-resource-name>Application config</web-resource-name>
+            <url-pattern>/views/user/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+            <role-name>user</role-name>
+        </auth-constraint>
+    </security-constraint>
 
-<!--        </auth-method>-->
-<!--    </login-config>-->
+    <error-page>
+        <error-code>403</error-code>
+        <location>/views/forbidden.xhtml</location>
+    </error-page>
 </web-app>

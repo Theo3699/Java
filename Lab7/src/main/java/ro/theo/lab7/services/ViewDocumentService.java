@@ -3,6 +3,7 @@ package ro.theo.lab7.services;
 import ro.theo.lab7.entities.Document;
 import ro.theo.lab7.repositories.DocumentRepository;
 
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Path("/documents")
+@RolesAllowed({"admin", "user"})
 @ApplicationScoped
 public class ViewDocumentService {
 
@@ -22,6 +24,7 @@ public class ViewDocumentService {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @RolesAllowed("admin")
     public List<Document> getall() {
         return documentRepo.getAll();
     }

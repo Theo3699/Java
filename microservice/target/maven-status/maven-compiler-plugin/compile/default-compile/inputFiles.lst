@@ -1,0 +1,17 @@
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\openapi\Destination.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\services\AddDocumentService.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\beans\DocumentBean.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\config\JPAConfig.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\entities\Document.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\services\ClientController.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\HelloController.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\health\ServiceReadyHealthCheck.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\MicroserviceRestApplication.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\repositories\DocumentRepository.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\services\ViewDocumentServiceInterface.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\services\ViewDocumentService.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\openapi\Booking.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\health\ServiceLiveHealthCheck.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\config\ApplicationConfig.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\config\ConfigTestController.java
+C:\Facultate\Java\microservice\src\main\java\ro\theo\microservice\openapi\BookingController.java

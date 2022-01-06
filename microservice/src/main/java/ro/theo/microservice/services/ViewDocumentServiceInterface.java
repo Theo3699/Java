@@ -11,7 +11,6 @@ import java.util.List;
 @RegisterRestClient(baseUri = "http://localhost:8080/microservice/resources")
 @ApplicationScoped
 public interface ViewDocumentServiceInterface {
-
     @GET
     @Path("/documents")
     List<Document> getDocuments();
