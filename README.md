@@ -80,8 +80,8 @@ Expose a CRUD REST [resource](https://github.com/Theo3699/Java/blob/main/microse
 - Run the microservice using an Eclipse Microprofile server implementation (Microprofile 4.0 + Wildfly)
 - Create an [additional](https://github.com/Theo3699/Java/blob/main/microservice/src/main/java/ro/theo/microservice/services/ClientController.java) microservice that will invoke the first one.
 
-## Lab 10 ->  Ran the microservices using an Eclipse Microprofile server implementation (Quarkus)
-- Created Docker [containers](https://github.com/Theo3699/Java/blob/main/lab10/src/main/resources/application.properties) for the microservices. Deployed the database also as a container.
+## Lab 10 -> lab10
+- Ran the microservices using an Eclipse Microprofile server implementation (Quarkus). Created Docker [containers](https://github.com/Theo3699/Java/blob/main/lab10/src/main/resources/application.properties) for the microservices. Deployed the database also as a container.
 ![image](https://user-images.githubusercontent.com/61683286/149225028-0e06332e-156a-4aa5-8a13-fe23b70b5236.png)
 - Used MicroProfile [Metrics](https://github.com/Theo3699/Java/blob/main/lab10/src/main/java/ro/theo/ExampleResource.java) API in order to monitor the behaviour of your service.
 ![image](https://user-images.githubusercontent.com/61683286/149225347-b091f2c9-bb18-4058-b000-dc89d55d3e11.png)
