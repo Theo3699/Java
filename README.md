@@ -85,7 +85,7 @@ Expose a CRUD REST [resource](https://github.com/Theo3699/Java/blob/main/microse
 ![image](https://user-images.githubusercontent.com/61683286/149225028-0e06332e-156a-4aa5-8a13-fe23b70b5236.png)
 - Used MicroProfile [Metrics](https://github.com/Theo3699/Java/blob/main/lab10/src/main/java/ro/theo/ExampleResource.java) API in order to monitor the behaviour of your service.
 ![image](https://user-images.githubusercontent.com/61683286/149225347-b091f2c9-bb18-4058-b000-dc89d55d3e11.png)
-- Implemented and test a health check procedure, in order to determine the readiness and the liveness of your service.
+- Implemented and test a [health](https://github.com/Theo3699/Java/blob/main/lab10/src/main/java/ro/theo/MyLivenessCheck.java) check procedure, in order to determine the readiness and the liveness of your service. (for this, I used
 ![image](https://user-images.githubusercontent.com/61683286/149225406-7f9d38cc-15a9-40c8-a37d-8729cba4ccef.png)
 
 
